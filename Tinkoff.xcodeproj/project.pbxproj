@@ -12,7 +12,20 @@
 		9600A09B1E7FEA1B0043A9F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9600A0991E7FEA1B0043A9F3 /* Main.storyboard */; };
 		9600A09D1E7FEA1B0043A9F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9600A09C1E7FEA1B0043A9F3 /* Assets.xcassets */; };
 		9600A0A01E7FEA1B0043A9F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9600A09E1E7FEA1B0043A9F3 /* LaunchScreen.storyboard */; };
-		9600A0AB1E7FEA1B0043A9F3 /* TinkoffTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9600A0AA1E7FEA1B0043A9F3 /* TinkoffTests.swift */; };
+		9600A0BC1E7FF1930043A9F3 /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9600A0BB1E7FF1930043A9F3 /* NewsService.swift */; };
+		9600A0BF1E7FF1AF0043A9F3 /* NewsTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9600A0BE1E7FF1AF0043A9F3 /* NewsTarget.swift */; };
+		9600A0C31E7FF8F30043A9F3 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9600A0C21E7FF8F30043A9F3 /* NewsItem.swift */; };
+		9600A0C51E7FF9B00043A9F3 /* BasicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9600A0C41E7FF9B00043A9F3 /* BasicService.swift */; };
+		9600A0C71E8038500043A9F3 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9600A0C61E8038500043A9F3 /* AppConstants.swift */; };
+		9600A0C91E8038E60043A9F3 /* MoyaResponseWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9600A0C81E8038E60043A9F3 /* MoyaResponseWrapper.swift */; };
+		9600A0CB1E803A350043A9F3 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9600A0CA1E803A350043A9F3 /* Error.swift */; };
+		9600A0CF1E803AE60043A9F3 /* ResponseMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9600A0CE1E803AE60043A9F3 /* ResponseMappingTests.swift */; };
+		9600A0D11E803D0D0043A9F3 /* ObservableType+Response mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9600A0D01E803D0D0043A9F3 /* ObservableType+Response mapping.swift */; };
+		9600A0D41E803EB80043A9F3 /* NewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9600A0D31E803EB80043A9F3 /* NewsResponse.swift */; };
+		9600A0D71E8065CD0043A9F3 /* IntFromStringTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9600A0D61E8065CD0043A9F3 /* IntFromStringTransform.swift */; };
+		9600A0D91E8065E90043A9F3 /* DateFromIntTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9600A0D81E8065E90043A9F3 /* DateFromIntTransform.swift */; };
+		9600A0DB1E8067010043A9F3 /* news.json in Resources */ = {isa = PBXBuildFile; fileRef = 9600A0DA1E8067010043A9F3 /* news.json */; };
+		96B0B5E01E8141C600FAD2B9 /* error.json in Resources */ = {isa = PBXBuildFile; fileRef = 96B0B5DF1E8141C600FAD2B9 /* error.json */; };
 		AAA10986FCAF37E797E9A368 /* Pods_TinkoffTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBBD12920C756A0BEBF644E5 /* Pods_TinkoffTests.framework */; };
 		F7382EFDDFF5EFFFAF0ED8CA /* Pods_Tinkoff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E873DA322CF2E63A9C09245C /* Pods_Tinkoff.framework */; };
 /* End PBXBuildFile section */
@@ -38,8 +51,21 @@
 		9600A09F1E7FEA1B0043A9F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9600A0A11E7FEA1B0043A9F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9600A0A61E7FEA1B0043A9F3 /* TinkoffTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinkoffTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9600A0AA1E7FEA1B0043A9F3 /* TinkoffTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinkoffTests.swift; sourceTree = "<group>"; };
 		9600A0AC1E7FEA1B0043A9F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9600A0BB1E7FF1930043A9F3 /* NewsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
+		9600A0BE1E7FF1AF0043A9F3 /* NewsTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTarget.swift; sourceTree = "<group>"; };
+		9600A0C21E7FF8F30043A9F3 /* NewsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
+		9600A0C41E7FF9B00043A9F3 /* BasicService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicService.swift; sourceTree = "<group>"; };
+		9600A0C61E8038500043A9F3 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		9600A0C81E8038E60043A9F3 /* MoyaResponseWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaResponseWrapper.swift; sourceTree = "<group>"; };
+		9600A0CA1E803A350043A9F3 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		9600A0CE1E803AE60043A9F3 /* ResponseMappingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseMappingTests.swift; sourceTree = "<group>"; };
+		9600A0D01E803D0D0043A9F3 /* ObservableType+Response mapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableType+Response mapping.swift"; sourceTree = "<group>"; };
+		9600A0D31E803EB80043A9F3 /* NewsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsResponse.swift; sourceTree = "<group>"; };
+		9600A0D61E8065CD0043A9F3 /* IntFromStringTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntFromStringTransform.swift; sourceTree = "<group>"; };
+		9600A0D81E8065E90043A9F3 /* DateFromIntTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFromIntTransform.swift; sourceTree = "<group>"; };
+		9600A0DA1E8067010043A9F3 /* news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = news.json; path = TinkoffTests/news.json; sourceTree = SOURCE_ROOT; };
+		96B0B5DF1E8141C600FAD2B9 /* error.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = error.json; sourceTree = "<group>"; };
 		9C8F16938A1F2787284CE3C2 /* Pods-TinkoffTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinkoffTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TinkoffTests/Pods-TinkoffTests.release.xcconfig"; sourceTree = "<group>"; };
 		CF942AC45EBACA04EE71B044 /* Pods-Tinkoff.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinkoff.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tinkoff/Pods-Tinkoff.release.xcconfig"; sourceTree = "<group>"; };
 		E873DA322CF2E63A9C09245C /* Pods_Tinkoff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tinkoff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,12 +126,8 @@
 		9600A0941E7FEA1B0043A9F3 /* Tinkoff */ = {
 			isa = PBXGroup;
 			children = (
-				9600A0951E7FEA1B0043A9F3 /* AppDelegate.swift */,
-				9600A0971E7FEA1B0043A9F3 /* ViewController.swift */,
-				9600A0991E7FEA1B0043A9F3 /* Main.storyboard */,
-				9600A09C1E7FEA1B0043A9F3 /* Assets.xcassets */,
-				9600A09E1E7FEA1B0043A9F3 /* LaunchScreen.storyboard */,
-				9600A0A11E7FEA1B0043A9F3 /* Info.plist */,
+				9600A0B51E7FEAC90043A9F3 /* Classes */,
+				9600A0B61E7FEAD00043A9F3 /* Supporting files */,
 			);
 			path = Tinkoff;
 			sourceTree = "<group>";
@@ -113,10 +135,123 @@
 		9600A0A91E7FEA1B0043A9F3 /* TinkoffTests */ = {
 			isa = PBXGroup;
 			children = (
-				9600A0AA1E7FEA1B0043A9F3 /* TinkoffTests.swift */,
 				9600A0AC1E7FEA1B0043A9F3 /* Info.plist */,
+				96B0B5DE1E81419700FAD2B9 /* Response mapping tests */,
 			);
 			path = TinkoffTests;
+			sourceTree = "<group>";
+		};
+		9600A0B51E7FEAC90043A9F3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9600A0951E7FEA1B0043A9F3 /* AppDelegate.swift */,
+				9600A0C61E8038500043A9F3 /* AppConstants.swift */,
+				9600A0B71E7FEAE30043A9F3 /* Presentation */,
+				9600A0B91E7FEAF10043A9F3 /* Business logic */,
+				9600A0B81E7FEAEC0043A9F3 /* Models */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		9600A0B61E7FEAD00043A9F3 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				9600A09C1E7FEA1B0043A9F3 /* Assets.xcassets */,
+				9600A09E1E7FEA1B0043A9F3 /* LaunchScreen.storyboard */,
+				9600A0A11E7FEA1B0043A9F3 /* Info.plist */,
+			);
+			name = "Supporting files";
+			sourceTree = "<group>";
+		};
+		9600A0B71E7FEAE30043A9F3 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				9600A0991E7FEA1B0043A9F3 /* Main.storyboard */,
+				9600A0971E7FEA1B0043A9F3 /* ViewController.swift */,
+			);
+			name = Presentation;
+			sourceTree = "<group>";
+		};
+		9600A0B81E7FEAEC0043A9F3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9600A0D51E8065BF0043A9F3 /* Helper */,
+				9600A0C11E7FF8DD0043A9F3 /* API communication */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		9600A0B91E7FEAF10043A9F3 /* Business logic */ = {
+			isa = PBXGroup;
+			children = (
+				9600A0C01E7FF1EF0043A9F3 /* Helper */,
+				9600A0BA1E7FF1820043A9F3 /* News service */,
+			);
+			name = "Business logic";
+			sourceTree = "<group>";
+		};
+		9600A0BA1E7FF1820043A9F3 /* News service */ = {
+			isa = PBXGroup;
+			children = (
+				9600A0D21E803E6C0043A9F3 /* Responses */,
+				9600A0BD1E7FF1A20043A9F3 /* Targets */,
+				9600A0BB1E7FF1930043A9F3 /* NewsService.swift */,
+			);
+			name = "News service";
+			sourceTree = "<group>";
+		};
+		9600A0BD1E7FF1A20043A9F3 /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				9600A0BE1E7FF1AF0043A9F3 /* NewsTarget.swift */,
+			);
+			name = Targets;
+			sourceTree = "<group>";
+		};
+		9600A0C01E7FF1EF0043A9F3 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				9600A0C41E7FF9B00043A9F3 /* BasicService.swift */,
+				9600A0C81E8038E60043A9F3 /* MoyaResponseWrapper.swift */,
+				9600A0D01E803D0D0043A9F3 /* ObservableType+Response mapping.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		9600A0C11E7FF8DD0043A9F3 /* API communication */ = {
+			isa = PBXGroup;
+			children = (
+				9600A0C21E7FF8F30043A9F3 /* NewsItem.swift */,
+				9600A0CA1E803A350043A9F3 /* Error.swift */,
+			);
+			name = "API communication";
+			sourceTree = "<group>";
+		};
+		9600A0D21E803E6C0043A9F3 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				9600A0D31E803EB80043A9F3 /* NewsResponse.swift */,
+			);
+			name = Responses;
+			sourceTree = "<group>";
+		};
+		9600A0D51E8065BF0043A9F3 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				9600A0D61E8065CD0043A9F3 /* IntFromStringTransform.swift */,
+				9600A0D81E8065E90043A9F3 /* DateFromIntTransform.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		96B0B5DE1E81419700FAD2B9 /* Response mapping tests */ = {
+			isa = PBXGroup;
+			children = (
+				9600A0DA1E8067010043A9F3 /* news.json */,
+				96B0B5DF1E8141C600FAD2B9 /* error.json */,
+				9600A0CE1E803AE60043A9F3 /* ResponseMappingTests.swift */,
+			);
+			name = "Response mapping tests";
 			sourceTree = "<group>";
 		};
 		B07F1FD8D88CB697EF57C215 /* Frameworks */ = {
@@ -227,6 +362,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96B0B5E01E8141C600FAD2B9 /* error.json in Resources */,
+				9600A0DB1E8067010043A9F3 /* news.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,8 +467,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9600A0BC1E7FF1930043A9F3 /* NewsService.swift in Sources */,
+				9600A0D11E803D0D0043A9F3 /* ObservableType+Response mapping.swift in Sources */,
+				9600A0C31E7FF8F30043A9F3 /* NewsItem.swift in Sources */,
+				9600A0C91E8038E60043A9F3 /* MoyaResponseWrapper.swift in Sources */,
 				9600A0981E7FEA1B0043A9F3 /* ViewController.swift in Sources */,
+				9600A0D71E8065CD0043A9F3 /* IntFromStringTransform.swift in Sources */,
 				9600A0961E7FEA1B0043A9F3 /* AppDelegate.swift in Sources */,
+				9600A0C71E8038500043A9F3 /* AppConstants.swift in Sources */,
+				9600A0C51E7FF9B00043A9F3 /* BasicService.swift in Sources */,
+				9600A0D41E803EB80043A9F3 /* NewsResponse.swift in Sources */,
+				9600A0CB1E803A350043A9F3 /* Error.swift in Sources */,
+				9600A0BF1E7FF1AF0043A9F3 /* NewsTarget.swift in Sources */,
+				9600A0D91E8065E90043A9F3 /* DateFromIntTransform.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +487,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9600A0AB1E7FEA1B0043A9F3 /* TinkoffTests.swift in Sources */,
+				9600A0CF1E803AE60043A9F3 /* ResponseMappingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +524,7 @@
 		9600A0AD1E7FEA1B0043A9F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -426,6 +575,7 @@
 		9600A0AE1E7FEA1B0043A9F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -470,6 +620,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 705E705F12E570A036592209 /* Pods-Tinkoff.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Tinkoff/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -483,6 +634,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CF942AC45EBACA04EE71B044 /* Pods-Tinkoff.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Tinkoff/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -496,7 +648,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 823005265D19B4570D1D1CA6 /* Pods-TinkoffTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TinkoffTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -511,7 +663,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9C8F16938A1F2787284CE3C2 /* Pods-TinkoffTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TinkoffTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -541,6 +693,7 @@
 				9600A0B11E7FEA1B0043A9F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9600A0B21E7FEA1B0043A9F3 /* Build configuration list for PBXNativeTarget "TinkoffTests" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +702,7 @@
 				9600A0B41E7FEA1B0043A9F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

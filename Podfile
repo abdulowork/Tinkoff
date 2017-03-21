@@ -2,14 +2,20 @@
 # platform :ios, '9.0'
 
 target 'Tinkoff' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
 
+  use_frameworks!
+  pod 'RxSwift', 					'~> 3.3'
+  pod 'RxCocoa', 					'~> 3.3'
+  pod 'RxDataSources', 				'~> 1.0'
+  pod 'Moya', 						'~> 8.0'
+  pod 'Moya/RxSwift'
+  pod 'Moya-ObjectMapper',			'~> 2.3'
+  pod 'Moya-ObjectMapper/RxSwift'
   # Pods for Tinkoff
 
   target 'TinkoffTests' do
     inherit! :search_paths
-    # Pods for testing
+    pod 'RxBlocking', '~> 3.3'
   end
 
 end
