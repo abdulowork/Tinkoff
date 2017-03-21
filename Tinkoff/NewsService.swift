@@ -11,12 +11,13 @@ import RxSwift
 
 class NewsService: BasicService<NewsTarget> {
   
-//  func getNewsFromAPI() -> Observable<NewsItem> {
-//    return
-//      provider
-//        .request(.tinkoff)
-//        .timeout(defaultTimeout, scheduler: utilityScheduler)
-//        .map{ _ in NewsItem() }
-//  }
+  func getNewsFromAPI() -> Observable<NewsResponse> {
+    return
+      provider
+        .request(.tinkoff)
+        .timeout(defaultTimeout, scheduler: utilityScheduler)
+        .mapResponse(NewsResponse.self)
+    
+  }
   
 }

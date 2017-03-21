@@ -13,9 +13,7 @@ struct NewsResponse: Mappable {
   
   var newsList: [NewsItem]!
   
-  init?(map: Map) {
-  
-  }
+  init?(map: Map) { }
   
   mutating func mapping(map: Map) {
     newsList <- map["payload"]

@@ -26,6 +26,7 @@
 		9600A0D91E8065E90043A9F3 /* DateFromIntTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9600A0D81E8065E90043A9F3 /* DateFromIntTransform.swift */; };
 		9600A0DB1E8067010043A9F3 /* news.json in Resources */ = {isa = PBXBuildFile; fileRef = 9600A0DA1E8067010043A9F3 /* news.json */; };
 		96B0B5E01E8141C600FAD2B9 /* error.json in Resources */ = {isa = PBXBuildFile; fileRef = 96B0B5DF1E8141C600FAD2B9 /* error.json */; };
+		96B0B5E31E81481C00FAD2B9 /* NewsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B0B5E21E81481C00FAD2B9 /* NewsServiceTests.swift */; };
 		AAA10986FCAF37E797E9A368 /* Pods_TinkoffTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBBD12920C756A0BEBF644E5 /* Pods_TinkoffTests.framework */; };
 		F7382EFDDFF5EFFFAF0ED8CA /* Pods_Tinkoff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E873DA322CF2E63A9C09245C /* Pods_Tinkoff.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,7 @@
 		9600A0D81E8065E90043A9F3 /* DateFromIntTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFromIntTransform.swift; sourceTree = "<group>"; };
 		9600A0DA1E8067010043A9F3 /* news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = news.json; path = TinkoffTests/news.json; sourceTree = SOURCE_ROOT; };
 		96B0B5DF1E8141C600FAD2B9 /* error.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = error.json; sourceTree = "<group>"; };
+		96B0B5E21E81481C00FAD2B9 /* NewsServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsServiceTests.swift; sourceTree = "<group>"; };
 		9C8F16938A1F2787284CE3C2 /* Pods-TinkoffTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinkoffTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TinkoffTests/Pods-TinkoffTests.release.xcconfig"; sourceTree = "<group>"; };
 		CF942AC45EBACA04EE71B044 /* Pods-Tinkoff.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinkoff.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tinkoff/Pods-Tinkoff.release.xcconfig"; sourceTree = "<group>"; };
 		E873DA322CF2E63A9C09245C /* Pods_Tinkoff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tinkoff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				9600A0AC1E7FEA1B0043A9F3 /* Info.plist */,
+				96B0B5E11E8147EF00FAD2B9 /* Service tests */,
 				96B0B5DE1E81419700FAD2B9 /* Response mapping tests */,
 			);
 			path = TinkoffTests;
@@ -252,6 +255,14 @@
 				9600A0CE1E803AE60043A9F3 /* ResponseMappingTests.swift */,
 			);
 			name = "Response mapping tests";
+			sourceTree = "<group>";
+		};
+		96B0B5E11E8147EF00FAD2B9 /* Service tests */ = {
+			isa = PBXGroup;
+			children = (
+				96B0B5E21E81481C00FAD2B9 /* NewsServiceTests.swift */,
+			);
+			name = "Service tests";
 			sourceTree = "<group>";
 		};
 		B07F1FD8D88CB697EF57C215 /* Frameworks */ = {
@@ -487,6 +498,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96B0B5E31E81481C00FAD2B9 /* NewsServiceTests.swift in Sources */,
 				9600A0CF1E803AE60043A9F3 /* ResponseMappingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

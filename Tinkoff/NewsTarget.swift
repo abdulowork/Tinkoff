@@ -14,11 +14,11 @@ enum NewsTarget: TargetType {
   case tinkoff
   
   var baseURL: URL {
-    return URL(string: "https://api.tinkoff.ru/v1/")!
+    return URL(string: "https://api.tinkoff.ru/v1")!
   }
   
   var path: String {
-    return "news"
+    return "/news"
   }
   
   var method: Moya.Method {
