@@ -8,6 +8,7 @@
 
 import Foundation
 import Moya
+import RxSwift
 
 class BasicService<Target: TargetType> {
   
@@ -16,5 +17,11 @@ class BasicService<Target: TargetType> {
   typealias Seconds = TimeInterval
   
   let defaultTimeout = Seconds(20)
+  
+  let workScheduler: SchedulerType
+  
+  init(scheduler: SchedulerType) {
+    workScheduler = scheduler
+  }
   
 }

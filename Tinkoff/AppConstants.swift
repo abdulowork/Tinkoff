@@ -7,6 +7,4 @@
 //
 
 import Foundation
-import RxSwift
 
-let utilityScheduler = ConcurrentDispatchQueueScheduler(qos: .utility)

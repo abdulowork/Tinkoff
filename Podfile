@@ -4,14 +4,17 @@
 target 'Tinkoff' do
 
   use_frameworks!
-  pod 'RxSwift', 					'~> 3.3'
-  pod 'RxCocoa', 					'~> 3.3'
-  pod 'RxDataSources', 				'~> 1.0'
-  pod 'Moya', 						'~> 8.0'
+  pod 'RxSwift', 					        '~> 3.3'
+  pod 'RxCocoa', 					        '~> 3.3'
+  pod 'RxDataSources', 				    '~> 1.0'
+  pod 'Moya', 						        '~> 8.0'
   pod 'Moya/RxSwift'
-  pod 'Moya-ObjectMapper',			'~> 2.3'
+  pod 'Moya-ObjectMapper',        '~> 2.3'
   pod 'Moya-ObjectMapper/RxSwift'
-  # Pods for Tinkoff
+  
+  # Обязательно зацените мою имплементацию DAO
+  pod 'RealmSwift',               '~> 2.4'
+  pod 'DAO',                      :git => 'https://github.com/biboran/dao.git'
 
   target 'TinkoffTests' do
     inherit! :search_paths
