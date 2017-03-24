@@ -9,9 +9,13 @@
 import Foundation
 import ObjectMapper
 
-struct NewsResponse: Mappable {
+struct NewsResponse {
   
   var newsList: [NewsItem]!
+  
+}
+
+extension NewsResponse: Mappable {
   
   init?(map: Map) { }
   

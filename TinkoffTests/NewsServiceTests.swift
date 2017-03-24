@@ -8,28 +8,62 @@
 
 import XCTest
 import RxBlocking
+import DAO
+import RealmSwift
+import RxSwift
 @testable import Tinkoff
 
 class NewsServiceTests: XCTestCase {
   
   var service: NewsService!
   
+  var dao: AnyDAO<NewsItem>!
+  
+  let inmemoryIdentifier = "Realm.Test"
+  
   override func setUp() {
-    service = NewsService()
+    
+    let utilityQueue = DispatchQueue.global(qos: .utility)
+    let utilityScheduler = ConcurrentDispatchQueueScheduler(queue: utilityQueue)
+    let realm = try! Realm(configuration: .init(inMemoryIdentifier: self.inmemoryIdentifier))
+    
+    dao = AnyDAO(base: CascadeRealmDAO<RealmNewsItem>(operationalRealm: realm))
+    service = NewsService(scheduler: utilityScheduler, dao: dao)
   }
   
   override func tearDown() {
     service = nil
+    dao = nil
   }
   
-  func testExample() {
+  func testSuccessfulCallAndPersistance() {
     guard
       let response = try! service.getNewsFromAPI().toBlocking().first() else {
         XCTFail()
         return
     }
     
-    XCTAssert(response.newsList[0].id > 0) //FIXME
+    let storedItems = dao.getAll()
+    
+    for item in storedItems {
+      XCTAssert(response.newsList.contains(item))
+    }
+  }
+  
+  func testGetFromDAO() {
+    guard
+      let APIResponse = try! service.getNewsFromAPI().toBlocking().first() else {
+        XCTFail()
+        return
+    }
+    
+    guard
+      let cachedResponse = try! service.getNewsFromDAO().toBlocking().first() else {
+        XCTFail()
+        return
+    }
+    
+    XCTAssert(APIResponse.newsList == cachedResponse.newsList)
     
   }
   

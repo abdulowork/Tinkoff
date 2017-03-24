@@ -8,14 +8,19 @@
 
 import Foundation
 import ObjectMapper
+import DAO
 
-struct NewsItem: Mappable {
+struct NewsItem {
   
   var id: Int!
   var name: String!
   var text: String!
   var publicationDate: Date!
   var bankInfoTypeID: Int!
+
+}
+
+extension NewsItem: Mappable {
   
   init?(map: Map) { }
   
@@ -26,5 +31,15 @@ struct NewsItem: Mappable {
     publicationDate <- (map["publicationDate.milliseconds"], DateFromMillisecondsTransform())
     bankInfoTypeID  <- map["bankInfoTypeId"]
   }
+  
+}
 
+extension NewsItem: Persistable, Equatable {
+  
+  typealias PrimaryKeyType = Int
+  
+  static func ==(lhs: NewsItem, rhs: NewsItem) -> Bool {
+    return lhs.id == rhs.id
+  }
+  
 }

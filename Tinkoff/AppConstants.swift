@@ -8,5 +8,15 @@
 
 import Foundation
 import RxSwift
+import RealmSwift
 
-let utilityScheduler = ConcurrentDispatchQueueScheduler(qos: .utility)
+let utilityQueue =
+  DispatchQueue(
+    label: "utilityQueue",
+    qos: .utility,
+    attributes: .concurrent,
+    autoreleaseFrequency: .inherit,
+    target: nil)
+
+let utilityScheduler = ConcurrentDispatchQueueScheduler(queue: utilityQueue)
+let utilityRealm = try! utilityQueue.sync(execute: { try Realm() })
