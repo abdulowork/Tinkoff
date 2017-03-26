@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="e5b-Ee-0hc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--News Item Content View Controller-->
+        <scene sceneID="7se-8j-z9O">
+            <objects>
+                <viewController id="e5b-Ee-0hc" customClass="NewsItemContentViewController" customModule="Tinkoff" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aET-Qd-mgE"/>
+                        <viewControllerLayoutGuide type="bottom" id="chv-ht-9c7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bCY-GP-LqP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rli-PX-VyW">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2IF-jD-D1e">
+                                        <rect key="frame" x="50" y="8" width="274" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="2IF-jD-D1e" secondAttribute="bottom" constant="8" id="3Cq-4M-CfG"/>
+                                    <constraint firstItem="2IF-jD-D1e" firstAttribute="centerX" secondItem="rli-PX-VyW" secondAttribute="centerX" id="Zyz-OQ-I0E"/>
+                                    <constraint firstItem="2IF-jD-D1e" firstAttribute="leading" secondItem="rli-PX-VyW" secondAttribute="leading" constant="50" id="b52-Ic-Ly6"/>
+                                    <constraint firstItem="2IF-jD-D1e" firstAttribute="top" secondItem="rli-PX-VyW" secondAttribute="top" constant="8" id="bcB-7m-kXr"/>
+                                    <constraint firstAttribute="trailing" secondItem="2IF-jD-D1e" secondAttribute="trailing" constant="50" id="qaV-1y-b5H"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rli-PX-VyW" secondAttribute="trailing" id="B8B-lr-6uM"/>
+                            <constraint firstItem="rli-PX-VyW" firstAttribute="leading" secondItem="bCY-GP-LqP" secondAttribute="leading" id="apg-ZF-O6i"/>
+                            <constraint firstItem="chv-ht-9c7" firstAttribute="top" secondItem="rli-PX-VyW" secondAttribute="bottom" id="dbo-lo-2r9"/>
+                            <constraint firstItem="rli-PX-VyW" firstAttribute="top" secondItem="aET-Qd-mgE" secondAttribute="bottom" id="t8E-on-Z7t"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hM3-kr-cW7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="399" y="-227"/>
+        </scene>
+    </scenes>
+</document>

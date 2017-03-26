@@ -10,17 +10,20 @@ import UIKit
 import RxDataSources
 import RxSwift
 
-final class NewsViewController: UIViewController {
+final class NewsViewController: BasicViewController, RouterType {
   
   @IBOutlet weak var tableView: UITableView!
   
-  let disposeBag = DisposeBag()
-  
   let presentationModel = NewsPresentationModel(newsService: ServiceLayer.shared.newsService, workScheduler: ConcurrentDispatchQueueScheduler(qos: .utility))
+  
+  var router: AnyRouter! = AnyRouter()
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
     configureTableView()
+    configureErrorHandling()
+    configureSegue()
   }
   
   private func configureTableView() {
@@ -53,6 +56,16 @@ final class NewsViewController: UIViewController {
       .subscribe(onNext: { [unowned self] error in
         self.display(error: error)
       })
+      .disposed(by: disposeBag)
+  }
+  
+  private func configureSegue() {
+    tableView.rx
+      .modelSelected(NewsItemViewModel.self)
+      .subscribe(onNext: { [unowned self] viewModel in
+        self.performSegue(withIdentifier: "NewsItemContent", sender: nil)
+      })
+      .disposed(by: disposeBag)
   }
   
   private func dataSource() -> RxTableViewSectionedReloadDataSource<NewsPresentationModel.SectionModel> {

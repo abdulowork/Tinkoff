@@ -36,7 +36,11 @@ class NewsPresentationModel {
           .getNewsFromAPI()
       }
       .observeOn(workScheduler)
-      .map{ $0.newsList.map{ NewsItemViewModel($0) } }
+      .map{
+        $0.newsList
+          .sorted{ $0.0.publicationDate.compare($0.1.publicationDate) == .orderedAscending }
+          .map{ NewsItemViewModel($0) }
+      }
       .map{ [SectionModel(items: $0)] }
       .observeOn(MainScheduler.instance)
       .do(
