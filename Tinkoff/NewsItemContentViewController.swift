@@ -7,13 +7,40 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
-class NewsItemContentViewController: BasicViewController {
+class NewsItemContentViewController: BasicViewController, RouterType {
   
-  let presentationModel
+  //TODO: Global routing without storyboard segues
+  let presentationModel = NewsItemContentPresentationModel(newsService: ServiceLayer.shared.newsService, workScheduler: ConcurrentDispatchQueueScheduler(qos: .utility))
+  
+  @IBOutlet weak var contentLabel: UILabel!
+  
+  var router: AnyRouter! {
+    return NewsItemContentRouter(viewController: self)
+  }
   
   override func viewDidLoad() {
+    presentationModel
+      .newsItemContentSubject
+      .map{ $0.content }
+      .bindTo(contentLabel.rx.text)
+      .disposed(by: disposeBag)
     
+    configureErrorHandling()
+    
+    presentationModel.updateEventForSectionModelSubject(event: Observable.just())
+  }
+  
+  //TODO: Generic presentationModel?
+  private func configureErrorHandling() {
+    presentationModel
+      .errorFunnel
+      .subscribe(onNext: { [unowned self] error in
+        self.display(error: error)
+      })
+      .disposed(by: disposeBag)
   }
   
 }

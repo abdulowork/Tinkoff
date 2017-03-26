@@ -9,7 +9,7 @@
 import UIKit
 
 protocol RouterType {
-  var router: AnyRouter! { get set }
+  var router: AnyRouter! { get }
 }
 
 class AnyRouter {

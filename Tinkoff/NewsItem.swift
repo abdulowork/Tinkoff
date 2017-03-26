@@ -10,11 +10,13 @@ import Foundation
 import ObjectMapper
 import DAO
 
+typealias HTMLFormatedSting = String
+
 struct NewsItem {
   
   var id: Int!
   var name: String!
-  var text: String!
+  var text: HTMLFormatedSting!
   var publicationDate: Date!
   var bankInfoTypeID: Int!
 

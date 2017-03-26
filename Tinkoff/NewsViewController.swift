@@ -63,7 +63,7 @@ final class NewsViewController: BasicViewController, RouterType {
     tableView.rx
       .modelSelected(NewsItemViewModel.self)
       .subscribe(onNext: { [unowned self] viewModel in
-        self.performSegue(withIdentifier: "NewsItemContent", sender: nil)
+        self.performSegue(withIdentifier: "NewsItemContent", sender: viewModel.model)
       })
       .disposed(by: disposeBag)
   }
@@ -76,22 +76,6 @@ final class NewsViewController: BasicViewController, RouterType {
       return cell
     }
     return dataSource
-  }
-  
-  private func display(error: Swift.Error) {
-    let alertController
-      = UIAlertController(title: "Error",
-                        message: error.localizedDescription,
-                        preferredStyle: .alert)
-    
-    let dismissAction
-      = UIAlertAction(title: "Dismiss",
-                      style: .cancel,
-                      handler: { [unowned alertController] _ in alertController.dismiss(animated: true, completion: nil)})
-    
-    alertController.addAction(dismissAction)
-    
-    present(alertController, animated: true, completion: nil)
   }
   
 }

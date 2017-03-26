@@ -12,13 +12,17 @@ import Moya
 enum NewsTarget: TargetType {
   
   case tinkoff
+  case detailedItem(for: NewsItem)
   
   var baseURL: URL {
     return URL(string: "https://api.tinkoff.ru/v1")!
   }
   
   var path: String {
-    return "/news"
+    switch self {
+    case .tinkoff: return "/news"
+    case .detailedItem(for: _): return "/news_content"
+    }
   }
   
   var method: Moya.Method {
@@ -26,7 +30,7 @@ enum NewsTarget: TargetType {
   }
   
   var parameterEncoding: ParameterEncoding {
-    return JSONEncoding()
+    return URLEncoding()
   }
   
   var sampleData: Data {
@@ -38,7 +42,12 @@ enum NewsTarget: TargetType {
   }
   
   var parameters: [String : Any]? {
-    return nil
+    switch self {
+    case .detailedItem(for: let item):
+      return ["id" : "\(item.id!)"]
+    default:
+      return nil
+    }
   }
   
 }

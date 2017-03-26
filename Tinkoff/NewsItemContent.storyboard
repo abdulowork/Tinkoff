@@ -12,7 +12,7 @@
         <!--News Item Content View Controller-->
         <scene sceneID="7se-8j-z9O">
             <objects>
-                <viewController id="e5b-Ee-0hc" customClass="NewsItemContentViewController" customModule="Tinkoff" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="e5b-Ee-0hc" customClass="NewsItemContentViewController" customModule="Tinkoff" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aET-Qd-mgE"/>
                         <viewControllerLayoutGuide type="bottom" id="chv-ht-9c7"/>
@@ -48,6 +48,9 @@
                             <constraint firstItem="rli-PX-VyW" firstAttribute="top" secondItem="aET-Qd-mgE" secondAttribute="bottom" id="t8E-on-Z7t"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contentLabel" destination="2IF-jD-D1e" id="rFH-SG-zGq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hM3-kr-cW7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

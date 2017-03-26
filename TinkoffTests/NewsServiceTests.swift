@@ -36,7 +36,7 @@ class NewsServiceTests: XCTestCase {
     dao = nil
   }
   
-  func testSuccessfulCallAndPersistance() {
+  func testSuccessfulCallAndPersistanceOfNews() {
     guard
       let response = try! service.getNewsFromAPI().toBlocking().first() else {
         XCTFail()
@@ -50,7 +50,25 @@ class NewsServiceTests: XCTestCase {
     }
   }
   
-  func testGetFromDAO() {
+  func testSuccessfulCallOfNewsContent() {
+    guard
+      let newsResponse = try! service.getNewsFromAPI().toBlocking().first() else {
+        XCTFail()
+        return
+    }
+    
+    let sampleNewsItem = newsResponse.newsList[0]
+    
+    guard
+      let detailedNewsResponse = try! service.getDetailedNewsItem(for: sampleNewsItem).toBlocking().first() else {
+        XCTFail()
+        return
+    }
+    
+    XCTAssert(detailedNewsResponse.detailedNewsItem.title == sampleNewsItem)
+  }
+  
+  func testGetNewsFromDAO() {
     guard
       let APIResponse = try! service.getNewsFromAPI().toBlocking().first() else {
         XCTFail()
@@ -64,7 +82,6 @@ class NewsServiceTests: XCTestCase {
     }
     
     XCTAssert(APIResponse.newsList == cachedResponse.newsList)
-    
   }
   
 }

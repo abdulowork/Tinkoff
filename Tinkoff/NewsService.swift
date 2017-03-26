@@ -34,8 +34,14 @@ class NewsService: BasicService<NewsTarget> {
         })
   }
   
-  func getContent(for item: NewsItem) {
-    
+  //TODO: separate service
+  func getDetailedNewsItem(for item: NewsItem) -> Observable<DetailedNewsResponse> {
+    return
+      provider
+        .request(.detailedItem(for: item))
+        .timeout(defaultTimeout, scheduler: workScheduler)
+        .mapResponse(DetailedNewsResponse.self)
+        .observeOn(MainScheduler.instance)
   }
   
   //TODO: Implement business logic for cached objects retriaval
