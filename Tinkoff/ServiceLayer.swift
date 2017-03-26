@@ -15,7 +15,7 @@ class ServiceLayer {
   
   private init() { }
   
-  let shared = ServiceLayer()
+  static let shared = ServiceLayer()
   
   //TODO: Implement threadScheduler?
   private let utilityScheduler = ConcurrentDispatchQueueScheduler(queue: DispatchQueue.global(qos: .utility))
